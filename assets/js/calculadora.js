@@ -1,7 +1,6 @@
 function addNumber(number){
 	var display = document.getElementById("resultado");
 	var lastElement = display.innerText.split("").pop();
-	var elementsArray = display.innerText.split("");
 	/* agrega numero si el ultimo elemento o el caracter entrente son numerico
 	sino reemplaza la ultima operacion*/
 	if ((isElementNumber(lastElement) || isElementNumber(number))) {
@@ -34,6 +33,7 @@ function isElementNumber(element){
 }
 
 function replaceLastElement(display, number){
+	var elementsArray = display.innerText.split("");
 	var lastIndex = elementsArray.length - 1;
 	elementsArray[lastIndex] = number;
 	display.innerText = elementsArray.join("");
